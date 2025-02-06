@@ -1,3 +1,6 @@
+Certainly! Here's the content of the README file that you can copy into your repository:
+
+```markdown
 # Terraform AWS EKS Cluster Setup
 
 This project uses Terraform to provision an Amazon EKS cluster along with the necessary VPC, subnets, and ECR repository.
@@ -26,23 +29,63 @@ This project uses Terraform to provision an Amazon EKS cluster along with the ne
    ```sh
    git clone https://github.com/iam-kishoret/iac-eks-terraform.git
    cd iac-eks-terraform
-Initialize Terraform:
+   ```
 
-sh
-terraform init
-Review and customize variables:
+2. **Initialize Terraform**:
 
-Edit the variables.tf file to set your desired values for the variables.
+   ```sh
+   terraform init
+   ```
 
-Apply the Terraform configuration:
+3. **Review and customize variables**:
 
-sh
-terraform apply
-This will create the necessary resources in your AWS account.
+   Edit the `variables.tf` file to set your desired values for the variables.
 
-Access the EKS cluster:
+4. **Apply the Terraform configuration**:
 
-Configure your kubectl to use the EKS cluster:
+   ```sh
+   terraform apply
+   ```
 
-sh
-aws eks --region <your-region> update-kubeconfig --name <your-cluster-nam
+   This will create the necessary resources in your AWS account.
+
+5. **Access the EKS cluster**:
+
+   Configure your `kubectl` to use the EKS cluster:
+
+   ```sh
+   aws eks --region <your-region> update-kubeconfig --name <your-cluster-name>
+   ```
+
+## Variables
+
+- `region`: AWS region where the resources will be created.
+- `vpc_name`: Name of the VPC.
+- `vpc_cidr`: CIDR block for the VPC.
+- `azs`: List of Availability Zones.
+- `private_subnets`: List of private subnet CIDR blocks.
+- `public_subnets`: List of public subnet CIDR blocks.
+- `cluster_name`: Name of the EKS cluster.
+- `cluster_version`: Version of the EKS cluster.
+- `worker_group_name`: Name of the worker node group.
+- `instance_types`: List of instance types for worker nodes.
+- `worker_min_size`: Minimum number of worker nodes.
+- `worker_desired_size`: Desired number of worker nodes.
+- `worker_max_size`: Maximum number of worker nodes.
+- `ecr_repo_name`: Name of the ECR repository.
+- `environment`: Environment tag (e.g., `development`, `production`).
+- `k8s_user`: Kubernetes user for cluster admin role.
+- `account_id`: AWS account ID.
+
+## Outputs
+
+- `vpc_id`: ID of the created VPC.
+- `eks_cluster_id`: ID of the created EKS cluster.
+- `ecr_repo_url`: URL of the created ECR repository.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+
+Feel free to copy this content into your repository's `README.md` file. If you need any further adjustments or additional sections, let me know!
