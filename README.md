@@ -1,6 +1,3 @@
-Certainly! Here's the content of the README file that you can copy into your repository:
-
-```markdown
 # Terraform AWS EKS Cluster Setup
 
 This project uses Terraform to provision an Amazon EKS cluster along with the necessary VPC, subnets, and ECR repository.
@@ -87,5 +84,3 @@ This project uses Terraform to provision an Amazon EKS cluster along with the ne
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
-Feel free to copy this content into your repository's `README.md` file. If you need any further adjustments or additional sections, let me know!
