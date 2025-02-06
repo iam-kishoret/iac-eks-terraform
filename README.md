@@ -26,3 +26,23 @@ This project uses Terraform to provision an Amazon EKS cluster along with the ne
    ```sh
    git clone https://github.com/iam-kishoret/iac-eks-terraform.git
    cd iac-eks-terraform
+Initialize Terraform:
+
+sh
+terraform init
+Review and customize variables:
+
+Edit the variables.tf file to set your desired values for the variables.
+
+Apply the Terraform configuration:
+
+sh
+terraform apply
+This will create the necessary resources in your AWS account.
+
+Access the EKS cluster:
+
+Configure your kubectl to use the EKS cluster:
+
+sh
+aws eks --region <your-region> update-kubeconfig --name <your-cluster-nam
