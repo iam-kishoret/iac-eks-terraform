@@ -1,13 +1,28 @@
-# k8s-aws-gitops-platform
-A Kubernetes GitOps-based platform with automated infrastructure provisioning and secure deployments.
-This project integrates Terraform, Argo CD, Helm, Vault, Atlantis, and AWS services to provide a complete DevOps and GitOps workflow. It includes:
-✅ Infrastructure as Code (IaC) with Terraform
-✅ CI/CD Pipelines using GitHub Actions
-✅ GitOps Deployment with Argo CD
-✅ Secure Secrets Management with Vault
-✅ Container Registry using AWS ECR
-✅ DNS & TLS Management with External-DNS & Cert-Manager
-✅ Ingress Routing via NGINX Ingress Controller
-✅ Infrastructure Change Automation with Atlantis
+# Terraform AWS EKS Cluster Setup
 
-Perfect for: Kubernetes administrators, SREs, and DevOps engineers looking for a scalable, automated, and production-ready Kubernetes infrastructure.
+This project uses Terraform to provision an Amazon EKS cluster along with the necessary VPC, subnets, and ECR repository.
+
+## Requirements
+
+- [Terraform](https://www.terraform.io/downloads.html) >= 1.5.0
+- AWS credentials configured in your environment
+- An SSH key pair for SSH access to the EC2 instances
+
+## Providers
+
+- **AWS** (>= 4.67.0)
+- **kubectl** (>= 1.14.0)
+
+## Modules
+
+- **VPC**: Provisions a VPC with public and private subnets.
+- **EKS**: Creates an EKS cluster with managed worker nodes.
+- **ECR**: Sets up an ECR repository for storing Docker images.
+
+## Usage
+
+1. **Clone the repository**:
+
+   ```sh
+   git clone https://github.com/iam-kishoret/iac-eks-terraform.git
+   cd iac-eks-terraform
